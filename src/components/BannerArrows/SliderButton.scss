@@ -1,0 +1,89 @@
+.slider-banner .slider-arrow {
+    height: 2.5svw !important;
+    width: 2.5svw !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    transition: 0.5s !important;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    z-index: 99;
+    margin-left: 13px;
+    margin-right: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        height: 1.5svw !important;
+        width: 1.5svw !important;
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.4) !important;
+    }
+}
+
+.slick-next {
+    right: -30px !important;
+}
+
+.slick-prev {
+    left: -30px !important;
+}
+
+@media screen and (min-width: 1800px) {
+    .slick-next {
+        right: -3svw !important;
+    }
+
+    .slick-prev {
+        left: -3svw !important;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .slider-arrow {
+        height: 3svw;
+        width: 3svw;
+
+        & img {
+            height: 1.5svw;
+            width: 1.5svw;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slider-arrow {
+        height: 4svw;
+        width: 4svw;
+
+        & img {
+            height: 2svw;
+            width: 2svw;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .slider-arrow {
+        height: 5svw;
+        width: 5svw;
+
+        & img {
+            height: 2.5svw;
+            width: 2.5svw;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slider-arrow {
+        height: 6svw;
+        width: 6svw;
+
+        & img {
+            height: 3svw;
+            width: 3svw;
+        }
+    }
+}

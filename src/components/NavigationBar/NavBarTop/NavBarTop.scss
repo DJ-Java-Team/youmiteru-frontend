@@ -1,0 +1,151 @@
+@import "@/assets/styles/vars.scss";
+
+.nav-bar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $nav-bar-bg-color;
+
+    &__center-panel {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__center-panel li {
+        transition: $nav-bar-transition-duration;
+    }
+
+    &__center-panel li:hover {
+        color: $nav-bar-text-color;
+        transform: scale(1.15);
+    }
+
+    &__left-panel {
+        display: flex;
+        padding: 20px;
+    }
+
+    &__right-panel {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding-right: 20px;
+    }
+
+    .user-profile {
+        display: flex;
+        padding-left: 1px;
+    }
+
+    .search {
+        display: flex;
+        padding-right: 5px;
+        cursor: pointer;
+        border: none;
+        transition: $nav-bar-transition-duration;
+        background-color: transparent;
+    }
+
+    .search:hover {
+        transform: scale(1.5);
+    }
+
+    .user-profile {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        transition: $nav-bar-transition-duration;
+    }
+
+    .user-profile:hover {
+        transform: scale(1.5);
+    }
+
+    .login {
+        transition: $nav-bar-transition-duration;
+    }
+
+    .login:hover {
+        color: $nav-bar-text-color;
+        transform: scale(1.2);
+    }
+}
+
+@media only screen and (min-width: 2600px) {
+    .nav-bar-top {
+        height: 4svw;
+
+        &__center-panel {
+            gap: 2svw;
+        }
+
+        &__right-panel {
+            gap: 2svw;
+            margin-right: 1svw;
+        }
+    }
+
+    .home {
+        font-size: 1.5svw;
+    }
+
+    .search img {
+        object-fit: cover;
+        height: 1.5svw;
+        width: 1.5svw;
+    }
+
+    .user-profile img {
+        object-fit: cover;
+        height: 1.5svw;
+        width: 1.5svw;
+    }
+}
+
+@media only screen and (min-width: 1800px) and (max-width: 2600px) {
+    .home {
+        font-size: 1svw;
+    }
+
+    .search img {
+        object-fit: cover;
+        height: 1svw;
+        width: 1svw;
+    }
+
+    .user-profile img {
+        object-fit: cover;
+        height: 1svw;
+        width: 1svw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-bar-top {
+        display: flex;
+        justify-content: space-between;
+        background-color: $nav-bar-bg-color;
+        border-bottom: 1.5px solid white;
+
+        &__center-panel {
+            display: none;
+        }
+
+        &__left-panel {
+            display: flex;
+            padding: 10px;
+        }
+
+        &__right-panel {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: $nav-bar-text-color;
+        }
+
+        .search:hover {
+            transform: none;
+            transition: none;
+        }
+    }
+}

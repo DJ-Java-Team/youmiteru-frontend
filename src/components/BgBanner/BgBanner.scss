@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+@import "@/assets/styles/vars.scss";
+
+.bg-banner {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: stretch;
+    align-items: flex-start;
+    width: 100svw;
+    height: 600px;
+    box-shadow: inset 0 40px 30px -10px #000, inset 0 -300px 200px -10px #000;
+
+    &__season-text:nth-child(1) {
+        max-width: 30svw;
+        height: auto;
+        margin-left: 5svw;
+    }
+
+    &__season-text p,
+    &__season-text h1 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-family: "Comfortaa", sans-serif;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    &__watch-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        margin-left: 5svw;
+        margin-top: 16px;
+        margin-bottom: 60px;
+    }
+
+    &__season-text p {
+        font-size: 1.5vw;
+        font-weight: $font-weight-regular;
+        letter-spacing: -1px;
+    }
+
+    &__season-text h1 {
+        font-size: 60px;
+        font-weight: $font-weight-bold;
+        letter-spacing: -1.5px;
+    }
+
+    &__slider:nth-child(3) {
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .bg-banner {
+        height: 40svw;
+
+        &__season-text h1 {
+            font-size: 4svw;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .bg-banner {
+        &__season-text p {
+            font-size: 2vw;
+        }
+
+        &__season-text h1 {
+            font-size: 3vw;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .bg-banner {
+        &__season-text:nth-child(1) {
+            max-width: 50svw;
+
+            & p {
+                font-size: 2.5vw;
+            }
+        }
+
+        &__season-text h1 {
+            font-size: 4vw;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bg-banner {
+        box-shadow: inset 0 40px 30px -10px #000, inset 0 -40px 30px -10px #000;
+        height: 350px;
+
+        &__season-text:nth-child(1) {
+            max-width: 70svw;
+            align-self: center;
+            margin-left: 0;
+            padding-right: 50px;
+
+            & h1 {
+                font-size: 20px;
+            }
+
+            & p {
+                font-size: 14px;
+                color: rgba(0, 255, 128, 0.765);
+            }
+        }
+
+        &__watch-buttons:nth-child(2) {
+            gap: 15px;
+            align-self: center;
+            margin-bottom: 100px;
+            margin-left: -120px;
+        }
+    }
+}
+

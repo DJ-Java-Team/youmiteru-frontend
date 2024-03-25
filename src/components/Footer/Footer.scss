@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Protest+Riot&display=swap");
+
+.footer {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    display: flex;
+    height: 9svw;
+    padding: 40px 0;
+    flex-direction: row;
+    align-content: center;
+    gap: 10px;
+    justify-content: flex-start;
+    border-top: 6px solid #000;
+
+    & h1 {
+        color: rgba(255, 255, 255, 0.96);
+        text-align: center;
+        font-family: Comfortaa;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5svw;
+        line-height: 24px;
+    }
+
+    &__first-part {
+        margin-left: 8svw;
+        width: 15svw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__logo-text {
+            font-family: "Protest Riot", sans-serif;
+            font-size: 2svw;
+        }
+
+        &__icons {
+            margin-top: 10px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: row;
+
+            & img {
+                width: 2svw;
+                height: 2svw;
+                margin: 0 10px;
+            }
+        }
+    }
+
+    &__second-part {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 22.5svw;
+        & li {
+            margin-top: 1svw;
+            margin-left: 1svw;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: row;
+
+        &__third-part {
+            width: 9svw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            & li {
+                margin-top: 1svw;
+                margin-left: 1svw;
+            }
+        }
+
+        &__four-part {
+            width: 15svw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            & li {
+                margin-top: 1svw;
+                margin-left: 1svw;
+            }
+        }
+    }
+}
+
+.footer-custom-link {
+    color: rgba(255, 255, 255, 0.56);
+    font-family: Comfortaa;
+    font-size: 1svw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+.footer-custom-link:hover {
+    color: rgb(0, 255, 213);
+    text-shadow: 2px 2px 20px rgba(0, 255, 213, 0.5);
+}
+
+@media screen and (max-width: 950px) {
+    .footer {
+        height: 140px;
+
+        &__first-part {
+            margin-left: 0;
+            width: 30svw;
+
+            &__logo-text {
+                font-size: 32px;
+            }
+
+            & img {
+                width: 32px;
+                height: 32px;
+                margin: 0 10px;
+            }
+        }
+
+        & h1 {
+            font-size: 20px;
+        }
+
+        &__block {
+            &__third-part {
+                width: 12svw;
+                margin-right: 30px;
+            }
+        }
+    }
+
+    .footer-custom-link {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
+
+        & h1 {
+            margin-top: 10px;
+        }
+
+        &__second-part {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            & li {
+                margin: 0;
+            }
+        }
+
+        &__block {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            &__third-part {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+
+                & li {
+                    margin: 0;
+                }
+            }
+
+            &__four-part {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+
+                & li {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.footer-custom-link {
+    margin-left: 0px;
+}

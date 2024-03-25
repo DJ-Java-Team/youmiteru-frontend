@@ -1,0 +1,36 @@
+@import "@/assets/styles/vars.scss";
+
+.nav-bar {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-bar {
+        display: flex;
+        background-color: $nav-bar-bg-color;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        border-top: 1.5px solid white;
+
+        &__list {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding: 0px 25px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        &__link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            font-weight: $font-weight-semibold;
+            font-size: $nav-bar-font-size;
+        }
+    }
+}

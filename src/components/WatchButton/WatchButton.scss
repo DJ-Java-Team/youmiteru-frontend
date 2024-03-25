@@ -1,0 +1,88 @@
+.watch-button-now {
+    font-family: "Montserrat-ExtraBold", Helvetica;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(23, 226, 237, 0.715);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 57px;
+    width: 187px;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: 0 0 40px #55a5af;
+    }
+
+}
+
+.watch-button-trailer {
+    font-family: "Montserrat-ExtraBold", Helvetica;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #f59c68;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 57px;
+    width: 187px;
+    transition: 0.5s;
+
+    &:hover {
+        box-shadow: 0 0 40px rgba(241, 166, 36, 0.5);
+    }
+}
+
+@media only screen and (min-width: 2200px) {
+    .watch-button-now {
+        font-size: 1svw;
+        height: 3svw;
+        width: 10svw;
+        border-radius: 1svw;
+
+        &:hover {
+            box-shadow: 0 0 3svw #55a5af;
+        }
+    }
+
+    .watch-button-trailer {
+        font-size: 1svw;
+        height: 3svw;
+        width: 10svw;
+        border-radius: 1svw;
+
+        &:hover {
+            box-shadow: 0 0 3svw rgba(241, 166, 36, 0.5);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .watch-button-now {
+        font-size: 10px;
+        height: 35px;
+        width: 85px;
+        border-radius: 5px;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    .watch-button-trailer {
+        font-size: 10px;
+        height: 35px;
+        width: 85px;
+        border-radius: 5px;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}

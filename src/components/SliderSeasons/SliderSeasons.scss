@@ -1,0 +1,153 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import "@/assets/styles/vars.scss";
+
+.slider-seasons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider-season {
+
+    &__link {
+        cursor: default;
+    }
+
+    margin-bottom: 30px;
+    width: 100svw;
+    margin-left: 130px;
+    height: 16svw;
+
+    &__card {
+        cursor: pointer;
+        width: 20svw;
+        height: 14svw;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 20svw;
+            height: 14svw;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .card_season_name,
+        .card_season_description {
+            display: none;
+        }
+    }
+
+    &__card:hover {
+        transform: scale(1.05);
+        z-index: 999;
+        transition: 0.3s ease;
+
+        img {
+            opacity: 0.2;
+        }
+
+        .card_season_name {
+            display: flex;
+            font-family: "Times New Roman", Times, serif;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin-left: 40px;
+            text-align: left;
+            font-size: 1.2svw;
+            margin-bottom: 1.5svw;
+            font-weight: $font-weight-bold;
+        }
+
+        .card_season_description {
+            display: flex;
+            position: absolute;
+            white-space: normal;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            width: 80%;
+            top: 2svw;
+            font-size: 1svw;
+            font-weight: $font-weight-regular;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .slider-season {
+        margin-bottom: 30px;
+
+        &__card:hover {
+            .card_season_description {
+                font-size: 1.2svw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .slider-season {
+        width: 100svw;
+        margin-left: 0px;
+        margin-bottom: 90px;
+
+        .slick-list {
+            padding-left: 55px;
+            margin-left: 10px;
+            height: 140px;
+        }
+
+        .card_season_name {
+            font-weight: 400;
+            display: block;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            bottom: -15px;
+            margin-left: 1;
+            white-space: nowrap;
+            max-width: 170px;
+        }
+
+        &__card {
+            height: auto;
+
+            img {
+                border-radius: 15px;
+                width: 45svw;
+                height: 28svw;
+            }
+
+        }
+
+        &__card:hover {
+            transform: scale(1);
+
+            .slick-list {
+                padding-left: 55px;
+                margin-left: 10px;
+                height: 140px;
+            }
+
+            img {
+                opacity: 1;
+                pointer-events: none;
+            }
+
+            .card_season_name,
+            .card_season_description {
+                display: none;
+            }
+        }
+    }
+}
