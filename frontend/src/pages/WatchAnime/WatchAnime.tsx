@@ -1,7 +1,7 @@
 import "./WatchAnime.scss";
 import { useSearchParams } from "react-router-dom";
 import { useSeasonDetailsQuery } from "../../hooks/useSeasonDetailsQuery";
-import SeasonDetails from "../../components/SeasonDetails/SeasonDetails";
+import SeasonDetails from "../../components/SeasonDetails";
 import { Footer } from "../../components/Footer/Footer";
 import NavigationBar from "../../components/NavigationBar/NavigationBar";
 
